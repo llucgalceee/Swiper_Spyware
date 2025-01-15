@@ -29,7 +29,7 @@ The purpose of this project is twofold:
    <img src="https://github.com/user-attachments/assets/1dd23135-165a-4f01-be67-d1041106f341" width="300" height="500">
    
 3. **Copy your ChatID**:  
-   Copy your `chat_id="131933xxxx"` and paste it into `keylogger.py`.
+   Copy your `chat_id="131933xxxx"` and paste it into `funciones_asyncronas.py`.
 
 4. **Make sure Python is installed**:  
    This project requires Python to run. Ensure you have Python 3.x installed on your system. You can download Python from https://www.python.org/downloads.
