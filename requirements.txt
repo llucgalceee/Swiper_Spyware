@@ -1,0 +1,17 @@
+pytelegrambotapi
+pynput
+pywin32
+python-telegram-bot
+Pillow
+mss
+opencv-python 
+pyperclip
+pyautogui
+psutil
+pyautogui
+pynput
+requests
+pywin32
+python-telegram-bot
+pyscreeze
+pyinstaller
