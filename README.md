@@ -19,7 +19,7 @@ The purpose of this project is twofold:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Roger-Valles/SpyWare-With-Telegram-Bot
+   git clone https://github.com/llucgalceee/Swiper_Spyware.git
    ```
   
 2. **Set up the Telegram bot token**:  
