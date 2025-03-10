@@ -12,7 +12,9 @@ The purpose of this project is twofold:
 ## Features  
 
 - **Sensitive Data Capture**: Collects data such as keystrokes, screenshots, system information, and all saved passwords in Chromium-based browsers.
-- **Communication via Telegram**: Uses a Telegram bot to securely send the collected data in real-time to a predefined channel.  
+  
+- **Communication via Telegram**: Uses a Telegram bot to securely send the collected data in real-time to a predefined channel.
+  
 - **Windows Compatibility**: Specifically designed to operate in Windows environments, leveraging system features to run discreetly.
 
 ## Installation
